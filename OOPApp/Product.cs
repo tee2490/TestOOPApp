@@ -12,5 +12,18 @@
             Console.WriteLine("start");  
         }
 
+        public void Input(string id, string name, double price, int stock)
+        { 
+            Id = id;
+            Name = name;
+            Price = price;
+            Stock = stock;
+        }
+
+        public void Display() //เมธอดธรรมดา
+        {
+            Console.WriteLine($"{Id} {Name} {Price} {Stock}");
+        }
+
     }
 }

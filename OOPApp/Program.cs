@@ -3,12 +3,8 @@
 Product product = new Product(); //oop
 Product product1 = new Product();
 
-product.Id = "A001";
-product.Name = "Coffee";
-product.Price = 100.00;
-product.Stock = 10;
+product.Input("A001","Coffee",1000,5);
+product1.Input("TA001", "TCoffee", 2000, 50);
 
-Console.WriteLine(product.Id);
-Console.WriteLine(product.Name);
-Console.WriteLine(product.Price);
-Console.WriteLine(product.Stock);
+product.Display();
+product1.Display();
