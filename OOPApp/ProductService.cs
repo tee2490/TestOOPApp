@@ -5,24 +5,33 @@ namespace OOPApp
     {
         //ออบเจค ซ้อน ออบเจค
         public List<Product> ProductList { get; set; } //List รายการข้อมูลที่ไม่จำกัด
+        Random rnd = new Random();
 
         public ProductService()
         {
             ProductList = new List<Product>();
         }
 
-        public void GenerateProduct()
+        public void GenerateProduct(int number=10)
         {
-            ProductList.Add(new Product {Id="A001",Name="Coffee",Price=1000,Stock=5 });
-            ProductList.Add(new Product { Id = "A002", Name = "Coffee", Price = 1000, Stock = 5 });
-            ProductList.Add(new Product { Id = "A003", Name = "Coffee", Price = 1000, Stock = 5 });
+            for (int i = 1; i <= number; i++) {
+                var temp = new Product()
+                {
+                    Id = "A00" +i,
+                    Name = "Coffee"+i,
+                    Price = rnd.NextDouble()*100+1,
+                    Stock = rnd.Next(1,11)
+                };
+
+                ProductList.Add(temp);
+            }
         }
 
         public void DisplayProduct()
         {
             foreach (var item in ProductList) 
             {
-                Console.WriteLine($"{item.Id} {item.Name} {item.Price} {item.Stock}");
+                Console.WriteLine($"{item.Id} {item.Name} {item.Price:N2} {item.Stock}");
             }
         }
 
