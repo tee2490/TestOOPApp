@@ -1,12 +1,7 @@
-﻿using OOPApp;
+﻿
+using OOPApp;
 
-Product product = new Product(); //oop
-Product product1 = new Product();
+var ps = new ProductService();
 
-product.Input("A001","Coffee",1000,5);
-product1.Input("TA001", "TCoffee", 2000, 5);
-
-product.Display();
-product1.Display();
-
-var test = Product.ShopName; //static สามารถเข้าถึงได้โดยตรง
+ps.GenerateProduct();
+ps.DisplayProduct();

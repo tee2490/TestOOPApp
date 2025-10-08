@@ -12,7 +12,7 @@
 
         public Product() //constructor
         {
-            Console.WriteLine("start");  
+           // Console.WriteLine("start");  
         }
 
         public void Input(string Id, string Name, double Price, int Stock)
