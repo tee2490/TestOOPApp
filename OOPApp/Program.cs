@@ -8,3 +8,5 @@ product1.Input("TA001", "TCoffee", 2000, 5);
 
 product.Display();
 product1.Display();
+
+var test = Product.ShopName; //static สามารถเข้าถึงได้โดยตรง

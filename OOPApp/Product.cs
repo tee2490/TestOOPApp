@@ -8,6 +8,8 @@
         public double Price { get; set; }
         public int Stock { get; set; }
 
+        public static string ShopName { get; set; } = "ComScience Shop";
+
         public Product() //constructor
         {
             Console.WriteLine("start");  
