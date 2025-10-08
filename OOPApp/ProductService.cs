@@ -35,5 +35,10 @@ namespace OOPApp
             }
         }
 
+        public string ShopName(string shopname = "ComSciene Shop") 
+        {
+            return shopname;
+        }
+
     }
 }
