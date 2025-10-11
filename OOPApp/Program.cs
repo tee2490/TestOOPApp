@@ -1,14 +1,8 @@
 ﻿
 using OOPApp;
 
-var ps = new ProductService();
+//Encapsulate & Inheritance
+var cs = new CoffeeService();
 
-ps.GenerateProduct(20);
-
-Console.WriteLine($"======= {ps.ShopName("My Shop")} =========");
-ps.DisplayProduct();
-
-//Encapsulate
-
-var test = new Coffee();
-test.SetDiscountRate(0.1);
+cs.GenerateCoffee(); //สร้างข้อมูลกาแฟ
+cs.DisplayCoffee();  // แสดงข้อมูลกาแฟ
