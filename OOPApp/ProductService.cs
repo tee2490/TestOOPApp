@@ -20,8 +20,9 @@ namespace OOPApp
                     Id = "A00" +i,
                     Name = "Coffee"+i,
                     Price = rnd.NextDouble()*100+1,
-                    Stock = rnd.Next(1,11)
+                    Stock = rnd.Next(1,11),
                 };
+                temp.SetCostPrice(9999);
 
                 ProductList.Add(temp);
             }
@@ -31,7 +32,7 @@ namespace OOPApp
         {
             foreach (var item in ProductList) 
             {
-                Console.WriteLine($"{item.Id} {item.Name} {item.Price:N2} {item.Stock}");
+                Console.WriteLine($"{item.Id} {item.Name} {item.Price:N2} {item.Stock} {item.GetCostPrice()}");
             }
         }
 

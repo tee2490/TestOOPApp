@@ -7,6 +7,15 @@
         public string Name { get; set; }
         public double Price { get; set; }
         public int Stock { get; set; }
+        // private: เข้าถึงได้เฉพาะภายในคลาส Product เท่านั้น
+        private double costPrice;
+
+        // protected: เข้าถึงได้ในคลาสนี้ และคลาสที่สืบทอดจากมัน (inherit)
+        protected double discountRate;
+
+        // internal: เข้าถึงได้เฉพาะภายใน assembly (โปรแกรมเดียวกัน)
+        internal int warehouseStock;
+
 
         public static string ShopName { get; set; } = "ComScience Shop";
 
@@ -26,8 +35,16 @@
 
         public void Display() //เมธอดธรรมดา
         {
-            Console.WriteLine($"{Id} {Name} {Price} {Stock}");
+            Console.WriteLine($"{Id} {Name} {Price} {Stock} {costPrice}");
         }
+
+        public void SetCostPrice(double costPrice) //เข้าถึงแบบทางอ้อม
+        { 
+            this.costPrice = costPrice;
+        }
+
+        public double GetCostPrice() => costPrice; //เข้าถึงแบบทางอ้อม
+
 
     }
 }
